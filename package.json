@@ -1,5 +1,5 @@
 {
-  "name": "tunis",
+  "name": "teddy",
   "version": "1.1.1",
   "private": true,
   "dependencies": {
@@ -48,5 +48,10 @@
   },
   "devDependencies": {
     "direction-reveal": "^2.0.2"
+  },
+
+  "engines": {
+    "node": "16.14.x",
+    "npm": "8.4.x"
   }
 }
