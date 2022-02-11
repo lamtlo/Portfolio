@@ -20,7 +20,8 @@
     "react-tabs": "^3.2.3",
     "react-transition-group": "^4.4.2",
     "slick-carousel": "^1.8.1",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "direction-reveal": "^2.0.2"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -46,10 +47,6 @@
       "last 1 safari version"
     ]
   },
-  "devDependencies": {
-    "direction-reveal": "^2.0.2"
-  },
-
   "engines": {
     "node": "16.x",
     "npm": "8.x"
