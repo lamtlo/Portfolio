@@ -1,5 +1,5 @@
 import React from "react";
-import Preview from "../views/Preview";
+// import Preview from "../views/Preview";
 import HomeLight from "../views/all-home-version/HomeLight";
 import HomeDark from "../views/all-home-version/HomeDark";
 import NotFound from "../views/NotFound";
@@ -12,10 +12,10 @@ const MyRoutes = () => {
       <Router>
         <ScrollTopBehaviour />
         <Routes>
-          <Route exact path="/" element={<HomeDark />}></Route>
+          <Route exact path="/" element={<HomeDark />} />
           <Route path="/home-light" element={<HomeLight />} />
           <Route path="/home-dark" element={<HomeDark />} />
-          <Route component={NotFound} />
+          <Route path="*" element={<NotFound />}></Route>
         </Routes>
       </Router>
     </>
