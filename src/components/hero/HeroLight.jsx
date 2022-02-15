@@ -1,13 +1,14 @@
 import React, { useState } from "react";
 import Modal from "react-modal";
 import Index from "../about/index";
+import Typical from "react-typical"
 
 const heroContent = {
   heroImage: "img/hero/dark.jpg",
   heroMobileImage: "img-mobile",
   heroTitleName: "Teddy",
   heroDesignation: "Web Developer/Data Analyst",
-  heroDescriptions: `I am a recent graduate with some experience in web developemnt and data analsy projects.`,
+  heroDescriptions: `I am a recent graduate with some experience in web development and data analysis.`,
   heroBtn: "more about me",
 };
 
@@ -23,9 +24,8 @@ const HeroLight = () => {
         <div
           className="col-lg-4 bg position-fixed d-none d-lg-block"
           style={{
-            backgroundImage: `url(${
-              process.env.PUBLIC_URL + heroContent.heroImage
-            })`,
+            backgroundImage: `url(${process.env.PUBLIC_URL + heroContent.heroImage
+              })`,
           }}
         ></div>
         <div className="col-12 col-lg-8 offset-lg-4 home-details  text-center text-lg-start">
@@ -36,8 +36,17 @@ const HeroLight = () => {
               alt="hero man"
             />
             <h1 className="text-uppercase poppins-font">
-              I'm {heroContent.heroTitleName}.
-              <span>{heroContent.heroDesignation}</span>
+              My name is {heroContent.heroTitleName}.
+              <Typical
+                steps={[
+                  'Web Developer',
+                  1500,
+                  'Data Analyst',
+                  1500,
+                ]}
+                wrapper="span"
+                loop={Infinity}
+              />
             </h1>
             <p className="open-sans-font">{heroContent.heroDescriptions}</p>
             <button className="button" onClick={toggleModalOne}>
