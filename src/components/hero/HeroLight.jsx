@@ -5,7 +5,7 @@ import Typical from "react-typical"
 
 const heroContent = {
   heroImage: "img/hero/dark.jpg",
-  heroMobileImage: "img-mobile",
+  heroMobileImage: "img/hero/dark.jpg",
   heroTitleName: "Teddy",
   heroDesignation: "Web Developer/Data Analyst",
   heroDescriptions: `I am a recent graduate with some experience in web development and data analysis.`,

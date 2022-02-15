@@ -5,10 +5,10 @@ import Typical from "react-typical"
 
 const heroContent = {
   heroImage: "img/hero/hero.jpg",
-  heroMobileImage: "img-mobile",
+  heroMobileImage: "img/hero/hero.jpg",
   heroTitleName: "Teddy",
   heroDesignation: "Web Developer/Data Analyst",
-  heroDescriptions: `I am a recent graduate with some experience in web development and data analysis .`,
+  heroDescriptions: `I am a recent graduate with some experience in web development and data analysis.`,
   heroBtn: "more about me",
 };
 
