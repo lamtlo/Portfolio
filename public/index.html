@@ -28,3 +28,10 @@
     <div id="root"></div>
   </body>
 </html>
+
+<script>
+  var host = "www.itsmeteddy.com" || "itsmeteddy.com";
+  if ((host == window.location.host) && (window.location.protocol != "https:")){
+  window.location.protocol = "https";
+  }
+  </script>
