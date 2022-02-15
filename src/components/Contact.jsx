@@ -89,7 +89,7 @@ const Contact = () => {
           <div className="col-12">
             <button type="submit" className="button">
               <span className="button-text">Send Message</span>
-              <span className="button-icon fa fa-send"></span>
+              <span className="button-icon fa-solid fa-paper-plane"></span>
             </button>
           </div>
           {/* End .col */}
