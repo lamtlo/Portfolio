@@ -11,7 +11,6 @@ const index = () => {
       <div className="container">
         <div className="row">
           {/* Personal Info Starts */}
-
           <div className="col-xl-6 col-lg-5 col-12">
             <div className="row">
               <div className="col-12">
@@ -23,7 +22,7 @@ const index = () => {
 
               <div className="col-12 d-block d-sm-none">
                 <img
-                  src="img/hero/img-mobile.jpg"
+                  src="img/hero/mobile-hero.jpg"
                   className="img-fluid main-img-mobile"
                   alt="about avatar"
                 />
@@ -35,7 +34,7 @@ const index = () => {
               </div>
               {/* End personal info */}
 
-              <div className="col-12 mt-1">
+              <div className="col-12 my-4">
                 <a className="button" href="img/cv.webp" download>
                   <span className="button-text">Download CV</span>
                   <span className="button-icon fa fa-download"></span>
@@ -47,10 +46,20 @@ const index = () => {
           {/*  Personal Info Ends */}
 
           {/*  Boxes Starts */}
-          <div className="col-xl-6 col-lg-7 col-12 mt-5 mt-lg-0">
+          {/* <div className="col-xl-6 col-lg-7 col-12 mt-5 mt-lg-0">
             <Achievements />
-          </div>
+          </div> */}
           {/* Achievements Ends */}
+
+          <div className="col-lg-6 m-15px-tb">
+            <h3 className="text-uppercase custom-title mb-0 ft-wt-600">
+              Academic Achievements
+            </h3>
+            <div className="resume-box">
+              <Education />
+            </div>
+          </div>
+
         </div>
         {/* End .row */}
 
@@ -73,17 +82,12 @@ const index = () => {
         <div className="row">
           <div className="col-12">
             <h3 className="text-uppercase pb-5 mb-0 text-left text-sm-center custom-title ft-wt-600">
-              Experience <span>&</span> Education
+              Programming Experience
             </h3>
           </div>
-          <div className="col-lg-6 m-15px-tb">
+          <div className="col-lg-12 m-15px-tb">
             <div className="resume-box">
               <Experience />
-            </div>
-          </div>
-          <div className="col-lg-6 m-15px-tb">
-            <div className="resume-box">
-              <Education />
             </div>
           </div>
         </div>

@@ -2,24 +2,14 @@ import React from "react";
 
 const educationContent = [
   {
-    year: "2015",
-    degree: "ENGINEERING DEGREE",
-    institute: "OXFORD UNIVERSITY",
-    details: `  Lorem ipsum dolor sit amet, consectetur tempor incididunt ut labore
-        adipisicing elit`,
-  },
-  {
-    year: "2012",
-    degree: "MASTER DEGREE",
-    institute: "KIEV UNIVERSITY",
-    details: `Lorem incididunt dolor sit amet, consectetur eiusmod dunt doldunt dol
-        elit, tempor incididunt`,
-  },
-  {
     year: "2017 - 2021",
     degree: "BACHELOR DEGREE ",
     institute: "ST. OLAF COLLEGE",
-    details: `Bachelor of Art in Computer Science and Mathematics`,
+    details: ["Bachelor of Art in Computer Science and Mathematics",
+      "Statistics and Data Science Concentration",
+      "6th place Konhauser Mathematical Problem Fest 2020",
+      "10th place Mathematical Association of America - North Central Section Team Competition 2018",
+    ],
   },
 ];
 
@@ -36,7 +26,13 @@ const Education = () => {
             {val.degree}
             <span className="place open-sans-font">{val.institute}</span>
           </h5>
-          <p className="open-sans-font">{val.details}</p>
+          <ul>
+            {val.details.map((description, j) => (
+              <li key={j}>
+                <p className="open-sans-font">{description}</p>
+              </li>
+            ))}
+          </ul>
         </li>
       ))}
     </ul>

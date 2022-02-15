@@ -5,7 +5,7 @@ import Typical from "react-typical"
 
 const heroContent = {
   heroImage: "img/hero/hero.jpg",
-  heroMobileImage: "img/hero/mobile-hero.jpg",
+  heroMobileImage: "mobile-hero",
   heroTitleName: "Teddy",
   heroDesignation: "Web Developer/Data Analyst",
   heroDescriptions: `I am a recent graduate with some experience in web development and data analysis.`,
@@ -40,9 +40,9 @@ const Hero = () => {
                 <Typical
                   steps={[
                     'Web Developer',
-                    1500,
+                    2000,
                     'Data Analyst',
-                    1500,
+                    2000,
                   ]}
                   wrapper="span"
                   loop={Infinity}
