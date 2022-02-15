@@ -4,8 +4,8 @@ import Index from "../about/index";
 import Typical from "react-typical"
 
 const heroContent = {
-  heroImage: "img/hero/dark.jpg",
-  heroMobileImage: "img/hero/dark.jpg",
+  heroImage: "img/hero/hero.jpg",
+  heroMobileImage: "img/hero/mobile-hero.jpg",
   heroTitleName: "Teddy",
   heroDesignation: "Web Developer/Data Analyst",
   heroDescriptions: `I am a recent graduate with some experience in web development and data analysis.`,

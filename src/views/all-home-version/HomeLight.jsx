@@ -24,7 +24,7 @@ const HomeLight = () => {
     <div className="green">
       <div className="demo-sticker">
         <a href="/home-dark">
-          <i className="fa fa-moon-o" aria-hidden="true"></i>
+          <i className="fa-solid fa-moon" aria-hidden="true"></i>
         </a>
       </div>
       <AnimatedCursor
