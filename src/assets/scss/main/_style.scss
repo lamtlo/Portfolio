@@ -172,6 +172,18 @@ body.light .about .c100:after {
   background-color: #fff;
 }
 
+body.light .about .circular-text {
+  fill: #666;
+}
+
+body.light .about .circular-total {
+  stroke: #eee;
+}
+
+body.light .about .circular-progress {
+  stroke: #72b626;
+}
+
 body.light .portfolio .slideshow figure {
   background-color: #fff;
 }
