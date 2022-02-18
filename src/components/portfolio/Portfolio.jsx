@@ -69,9 +69,9 @@ const Portfolio = () => {
               data-aos-delay="0"
             >
               <figure onClick={toggleModalOne}>
-                <img src="img/projects/project-1.jpg" alt="Portolio" />
+                <img src="img/projects/Car Prices Poland Visual.jpg" alt="Portolio" />
                 <div className=" hover-content-wrapper">
-                  <span className="content-title">Mockup Project</span>
+                  <span className="content-title">Average Car Price Factors</span>
                 </div>
               </figure>
 
@@ -426,44 +426,39 @@ const Portfolio = () => {
           <ul className="row grid justify-content-center">
             {/* <!-- Portfolio Item Starts --> */}
             <li
-              className="direction-reveal"
               data-aos="fade-right"
               data-aos-duration="1200"
               data-aos-delay="0"
             >
-              <figure
-                className="direction-reveal__card"
-                onClick={toggleModalSeven}
-              >
-                <img src="img/projects/project-7.jpg" alt="Portolio" />
+              <figure onClick={toggleModalOne}>
+                <img src="img/projects/Car Prices Poland Visual.jpg" alt="Portolio" />
                 <div className=" hover-content-wrapper">
-                  <span className="content-title"> Facebook Profile</span>
+                  <span className="content-title">Average Car Price Factors</span>
                 </div>
               </figure>
 
-              {/* Start ModalSevenContent */}
+              {/* Start ModalOneContent */}
               <Modal
-                isOpen={isOpen7}
-                onRequestClose={toggleModalSeven}
+                isOpen={isOpen}
+                onRequestClose={toggleModalOne}
                 contentLabel="My dialog"
                 className="custom-modal dark"
                 overlayClassName="custom-overlay dark"
                 closeTimeoutMS={500}
               >
                 <div>
-                  <button className="close-modal" onClick={toggleModalSeven}>
+                  <button className="close-modal" onClick={toggleModalOne}>
                     <img src="/img/cancel.svg" alt="close icon" />
                   </button>
                   {/* End close icon */}
 
                   <div className="box_inner portfolio">
-                    <ModalSevenContent />
+                    <ModalOneContent />
                   </div>
                 </div>
               </Modal>
-              {/* End  ModalSevenContent */}
-            </li>
-            {/* <!-- Portfolio Item Ends --> */}
+              {/* End  ModalOneContent */}
+            </li>            {/* <!-- Portfolio Item Ends --> */}
             {/* <!-- Portfolio Item Starts --> */}
             <li
               className="direction-reveal"

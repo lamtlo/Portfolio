@@ -76,7 +76,7 @@ const HomeDark = () => {
               <h1>
                 my <span>portfolio</span>
               </h1>
-              <span className="title-bg">works</span>
+              <span className="title-bg">WORKS</span>
             </div>
             {/* End title */}
             <div
@@ -117,7 +117,7 @@ const HomeDark = () => {
                   <p className="open-sans-font mb-4">
                     Feel free to get in touch with me. I am always open to
                     discussing new projects, creative ideas or opportunities to
-                    be part of your visions.
+                    be part of your vision.
                   </p>
                   <Address />
                   {/* End Address */}

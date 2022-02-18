@@ -37,16 +37,16 @@ const Hero = () => {
             />
             <h1 className="text-uppercase poppins-font">
               My name is {heroContent.heroTitleName}.
-                <Typical
-                  steps={[
-                    'Web Developer',
-                    2000,
-                    'Data Analyst',
-                    2000,
-                  ]}
-                  wrapper="span"
-                  loop={Infinity}
-                />
+              <Typical
+                steps={[
+                  'Web Developer',
+                  2000,
+                  'Data Analyst',
+                  2000,
+                ]}
+                wrapper="span"
+                loop={Infinity}
+              />
             </h1>
             <p className="open-sans-font">{heroContent.heroDescriptions}</p>
             <button className="button" onClick={toggleModalOne}>
