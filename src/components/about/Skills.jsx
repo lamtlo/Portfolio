@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef, createRef } from "react";
+import React, { useState, useEffect, createRef } from "react";
 import CircularProgress from "./CircularProgress";
 
 const skillsContent = [
@@ -29,16 +29,16 @@ const Skills = () => {
     const handleScroll = () => {
       const currentBottom = window.innerHeight;
       elRefs.forEach((item, i) => {
-        if (item.current.getBoundingClientRect().bottom < currentBottom) {
+        let my_item = item.current.getBoundingClientRect();
+        if (my_item.bottom < currentBottom + my_item.height * .75 || item.current.getBoundingClientRect().top > -my_item.height / 2) {
           new_progress[i] = skillsContent[i].skillMax;
         }
-        if (item.current.getBoundingClientRect().bottom > currentBottom) {
+        if (my_item.bottom > currentBottom + my_item.height * .75 || item.current.getBoundingClientRect().top < -my_item.height / 2) {
           new_progress[i] = 0;
         }
       })
       setProgress(new_progress);
     };
-
     window.addEventListener("scroll", handleScroll, { passive: true });
 
     return () => window.removeEventListener("scroll", handleScroll);

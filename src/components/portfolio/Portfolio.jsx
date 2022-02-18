@@ -54,10 +54,10 @@ const Portfolio = () => {
     <Tabs>
       <TabList className="portfolio-tab-list">
         <Tab>ALL</Tab>
-        <Tab>LOGO</Tab>
-        <Tab>VIDEO</Tab>
-        <Tab>GRAPHIC DESIGN</Tab>
-        <Tab>MOCKUP</Tab>
+        <Tab>POWER BI</Tab>
+        <Tab>TABLEAU</Tab>
+        <Tab>R</Tab>
+        <Tab>PYTHON</Tab>
       </TabList>
 
       <div className="portfolio-tab-content">
