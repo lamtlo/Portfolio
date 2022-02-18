@@ -1,34 +1,57 @@
-import React from "react";
+import React, { useState, useEffect, useRef, createRef } from "react";
 import CircularProgress from "./CircularProgress";
 
 const skillsContent = [
-  { skillClass: "p80", skillPercent: "80", skillName: "PYTHON / DJANGO / FLASK" },
-  { skillClass: "p25", skillPercent: "25", skillName: "JAVASCRIPT / JQUERY / REACT" },
-  { skillClass: "p65", skillPercent: "65", skillName: "POWER BI / TABLEAU" },
-  { skillClass: "p55", skillPercent: "55", skillName: "R PROGRAMMING" },
-  { skillClass: "p40", skillPercent: "40", skillName: "C / C++" },
-  { skillClass: "p25", skillPercent: "25", skillName: "NGINX" },
-  { skillClass: "p45", skillPercent: "45", skillName: "HEROKU / DOCKER" },
-  { skillClass: "p55", skillPercent: "55", skillName: "SQL / POSTGRESQL" },
+  { skillMax: "80", skillPercent: "0", skillName: "PYTHON / DJANGO / FLASK" },
+  { skillMax: "25", skillPercent: "0", skillName: "JAVASCRIPT / JQUERY / REACT" },
+  { skillMax: "65", skillPercent: "0", skillName: "POWER BI / TABLEAU" },
+  { skillMax: "55", skillPercent: "0", skillName: "R PROGRAMMING" },
+  { skillMax: "40", skillPercent: "0", skillName: "C / C++" },
+  { skillMax: "25", skillPercent: "0", skillName: "NGINX" },
+  { skillMax: "45", skillPercent: "0", skillName: "HEROKU / DOCKER" },
+  { skillMax: "55", skillPercent: "0", skillName: "SQL / POSTGRESQL" },
 ];
 
 const Skills = () => {
+  const arrLength = skillsContent.length;
+  const [elRefs, setElRefs] = useState([]);
+
+  const [progress, setProgress] = useState(Array(arrLength).fill(0));
+  let new_progress = JSON.parse(JSON.stringify(progress));
+
+  useEffect(() => {
+    setElRefs((elRefs) =>
+      Array(arrLength)
+        .fill()
+        .map((_, i) => elRefs[i] || createRef()),
+    );
+
+    const handleScroll = () => {
+      const currentBottom = window.innerHeight;
+      elRefs.forEach((item, i) => {
+        if (item.current.getBoundingClientRect().bottom < currentBottom) {
+          new_progress[i] = skillsContent[i].skillMax;
+        }
+        if (item.current.getBoundingClientRect().bottom > currentBottom) {
+          new_progress[i] = 0;
+        }
+      })
+      setProgress(new_progress);
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [progress]);
+
   return (
     <>
       {skillsContent.map((val, i) => (
-        <div className="col-6 col-md-3 mb-3 mb-sm-5" key={i} align="center">
-          {/* <div className={`c100 ${val.skillClass}`}>
-            <span>{val.skillPercent}%</span>
-            <div className="slice">
-              <div className="bar"></div>
-              <div className="fill"></div>
-            </div>
-          </div> */}
-
+        <div className="col-6 col-md-3 mb-3 mb-sm-5" key={i} align="center" ref={elRefs[i]}>
           <CircularProgress
             size={120}
             strokeWidth={10}
-            percentage={val.skillPercent}
+            percentage={progress[i]}
           />
 
           <h6 className="text-uppercase open-sans-font text-center mt-2 mt-sm-4">
