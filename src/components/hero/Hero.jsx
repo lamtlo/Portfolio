@@ -8,7 +8,7 @@ const heroContent = {
   heroMobileImage: "mobile-hero",
   heroTitleName: "Teddy",
   heroDesignation: "Web Developer/Data Analyst",
-  heroDescriptions: `I am a recent graduate with some experience in web development and data analysis. This website is intended to function as a portfolio, not only to show others what I am capable of, but also to reflect my growth over time.`,
+  heroDescriptions: `I am a recent graduate with experience in web development and data analysis. This website is intended to function as a portfolio, not only to show others what I am capable of, but also to reflect my growth over time.`,
   heroBtn: "more about me",
 };
 

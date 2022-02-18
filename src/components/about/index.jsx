@@ -34,7 +34,7 @@ const index = () => {
               {/* End personal info */}
 
               <div className="col-12 my-4">
-                <a className="button" href="img/cv.webp" download>
+                <a className="button" href="img/Resume - Lam Lo (SWE).docx" download>
                   <span className="button-text">Download CV</span>
                   <span className="button-icon fa fa-download"></span>
                 </a>

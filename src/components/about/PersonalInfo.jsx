@@ -5,7 +5,7 @@ const personalInfoContent = [
   { meta: "Friends Call Me", metaInfo: "Teddy" },
   { meta: "Age", metaInfo: new Date().getFullYear() - 1999},
   { meta: "Nationality", metaInfo: "Vietnamese" },
-  { meta: "Freelance", metaInfo: "Available" },
+  { meta: "Freelance", metaInfo: "Open to jobs" },
   { meta: "Address", metaInfo: "442 Webster St, Palo ALto, CA" },
   { meta: "Phone", metaInfo: "(507) 703-2093" },
   { meta: "Email", metaInfo: "lamtlo820@gmail.com" },
