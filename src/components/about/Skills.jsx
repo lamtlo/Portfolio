@@ -15,8 +15,12 @@ const skillsContent = [
 const Skills = () => {
   const arrLength = skillsContent.length;
   const [elRefs, setElRefs] = useState([]);
+  
+  const newList = skillsContent.map(function (currentElement) {
+    return parseInt(currentElement.skillMax, 10);
+  });
 
-  const [progress, setProgress] = useState(Array(arrLength).fill(0));
+  const [progress, setProgress] = useState(newList);
   let new_progress = JSON.parse(JSON.stringify(progress));
 
   useEffect(() => {
