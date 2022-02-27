@@ -13,7 +13,7 @@ const index = () => {
           <div className="col-xl-6 col-lg-5 col-12">
             <div className="row">
               <div className="col-12">
-                <h3 className="text-uppercase custom-title mb-0 ft-wt-600">
+                <h3 className="text-uppercase text-lg-start text-center custom-title mb-0 ft-wt-600">
                   personal infos
                 </h3>
               </div>
@@ -51,7 +51,7 @@ const index = () => {
           {/* Achievements Ends */}
 
           <div className="col-lg-6 m-15px-tb">
-            <h3 className="text-uppercase custom-title mb-0 ft-wt-600">
+            <h3 className="text-uppercase text-lg-start text-center custom-title mb-0 ft-wt-600">
               Academic Achievements
             </h3>
             <div className="resume-box">
