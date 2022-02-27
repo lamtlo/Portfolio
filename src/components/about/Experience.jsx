@@ -31,30 +31,36 @@ const experienceContent = [
   },
 ];
 
+const listColNum = 2;
+
 const Experience = () => {
   return (
-    <ul style={{columns: 2}}>
-      {experienceContent.map((val, i) => (
-        <li key={i}>
-          <div className="icon">
-            <i className="fa fa-briefcase"></i>
-          </div>
-          <span className="time open-sans-font text-uppercase">{val.year}</span>
-          <h5 className="poppins-font text-uppercase">
-            {val.position}
-            {/* <span className="place open-sans-font">{val.compnayName}</span> */}
-          </h5>
-          {/* <p className="open-sans-font">{val.details}</p> */}
-          <ul>
-            {val.details.map((description, j) => (
-              <li key={j}>
-                <p className="open-sans-font">{description}</p>
-              </li>
-            ))}
-          </ul>
-        </li>
+    <>
+      {Array.from(Array(experienceContent.length / listColNum).keys()).map((val, i) => (
+        <ul className="list-group list-group-horizontal-md" key={i}>
+          {experienceContent.slice(val*listColNum, (val+1)*listColNum).map((val, j) => (
+            <li className="col-md-6" key={j}>
+              <div className="icon">
+                <i className="fa fa-briefcase"></i>
+              </div>
+              <span className="time open-sans-font text-uppercase">{val.year}</span>
+              <h5 className="poppins-font text-uppercase">
+                {val.position}
+                {/* <span className="place open-sans-font">{val.compnayName}</span> */}
+              </h5>
+              {/* <p className="open-sans-font">{val.details}</p> */}
+              <ul>
+                {val.details.map((description, k) => (
+                  <li key={k}>
+                    <p className="open-sans-font">{description}</p>
+                  </li>
+                ))}
+              </ul>
+            </li>
+          ))}
+        </ul>
       ))}
-    </ul>
+    </>
   );
 };
 
