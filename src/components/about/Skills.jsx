@@ -3,13 +3,13 @@ import CircularProgress from "./CircularProgress";
 
 const skillsContent = [
   { skillMax: "80", skillPercent: "0", skillName: "PYTHON / DJANGO / FLASK" },
-  { skillMax: "25", skillPercent: "0", skillName: "JAVASCRIPT / JQUERY / REACT" },
+  { skillMax: "55", skillPercent: "0", skillName: "JAVASCRIPT / JQUERY / REACT" },
   { skillMax: "65", skillPercent: "0", skillName: "POWER BI / TABLEAU" },
-  { skillMax: "55", skillPercent: "0", skillName: "R PROGRAMMING" },
-  { skillMax: "40", skillPercent: "0", skillName: "C / C++" },
-  { skillMax: "25", skillPercent: "0", skillName: "NGINX" },
+  { skillMax: "50", skillPercent: "0", skillName: "R PROGRAMMING" },
+  { skillMax: "55", skillPercent: "0", skillName: "SOLIDITY" },
   { skillMax: "45", skillPercent: "0", skillName: "HEROKU / DOCKER" },
-  { skillMax: "55", skillPercent: "0", skillName: "SQL / POSTGRESQL" },
+  { skillMax: "40", skillPercent: "0", skillName: "C / C++" },
+  { skillMax: "35", skillPercent: "0", skillName: "SQL / POSTGRESQL" },
 ];
 
 const Skills = () => {
