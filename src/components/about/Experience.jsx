@@ -2,6 +2,14 @@ import React from "react";
 
 const experienceContent = [
   {
+    year: "2019 - 2020",
+    position: "Web Development Project",
+    details: ["Maintained the Quiz Game web-app for professor Epstein to use in a 60-student musicology course",
+      "Increased the test coverage by 50%, refactored the code base, and added features according to professors requests",
+      "Resolved server-related issues and database problems during usage of the app including modifying Heroku deployment pipeline and adjusting NGINX configurations",
+    ],
+  },
+  {
     year: "2020",
     position: "Suicide Rate Data Analysis Project",
     details: ["Performed exploratory data analysis using PowerBI data visualization to find 6 most relevant and impactful predictors for the data model.",
@@ -16,17 +24,15 @@ const experienceContent = [
     ],
   },
   {
-    year: "2019 - 2020",
-    position: "Web Development Project",
-    details: ["Maintained the Quiz Game web-app for professor Epstein to use in a 60-student musicology course",
-      "Increased the test coverage by 50%, refactored the code base, and added features according to professors requests",
-      "Resolved server-related issues and database problems during usage of the app including modifying Heroku deployment pipeline and adjusting NGINX configurations",
-    ],
-  },
-  {
     year: "2020",
     position: "Video Game Strategy Analysis Research",
     details: ["Analyzed the data of more than 200,000 matches using R and compared between 10 different models, such as tree-based methods, KNN, and LDA, for drafting strategy of a multiplayer online game"
+    ],
+  },
+  {
+    year: "2022",
+    position: "Ducth Auction Smart Contract",
+    details: ["Implemented and deployed a dutch auction smart contract on Ropsten Testnet using Solidity and Brownie testing framework"
     ],
   },
 ];
@@ -36,9 +42,9 @@ const listColNum = 2;
 const Experience = () => {
   return (
     <>
-      {Array.from(Array(experienceContent.length / listColNum).keys()).map((val, i) => (
+      {Array.from(Array(Math.ceil(experienceContent.length / listColNum)).keys()).map((val, i) => (
         <ul className="list-group list-group-horizontal-md" key={i}>
-          {experienceContent.slice(val*listColNum, (val+1)*listColNum).map((val, j) => (
+          {experienceContent.slice(val * listColNum, Math.min((val + 1) * listColNum), experienceContent.length).map((val, j) => (
             <li className="col-md-6" key={j}>
               <div className="icon">
                 <i className="fa fa-briefcase"></i>
